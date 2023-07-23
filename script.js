@@ -9,7 +9,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-const discordWebhookURL = "https://discord.com/api/webhooks/1131151043607142420/yhPSUqvaV3mM9wgBh5B8EMWyycBfGF8uLyux378pn1cselxwqw_LUWx_s6E4d2vHEV22";
+const discordWebhookURL = "https://discord.com/api/webhooks/1131181858298802206/0U-KE9V6KNjyOPZh78hlA3cqr0_2jeLJ38qGJ94VuTPi_lP7OwWSckVIWB0nPVXQkTjy";
 const pairs = [
   "BTC_USDT",
   "ETH_USDT",
