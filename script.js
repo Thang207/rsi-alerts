@@ -134,7 +134,7 @@ function fetchKLineData(pair, interval, candleCount, candleInterval, timeFrame) 
         const klineData = data.data;
         const closePrices = klineData.close;
         const rsi = calculateRSI(closePrices, timePeriods);
-        // const rsiMessage = `RSI for ${pair}: ${rsi} | ở khung ${interval}!`;
+        // const rsiMessage = `RSI for ${pair}: ${rsi} ở khung ${interval}!`;
         const currentTime = moment().tz("Asia/Ho_Chi_Minh").format("HH:mm DD-MM-YYYY");
         const overboughtMessage = {
           title: `:green_circle: ${pair} :loudspeaker: [ RSI quá mua ${timeFrame} lúc ${currentTime} ]`,
@@ -147,7 +147,7 @@ function fetchKLineData(pair, interval, candleCount, candleInterval, timeFrame) 
           url: `https://futures.mexc.com/exchange/${pair}?timeframe=${timeFrame}`,
           color: 0xff0000, // Red color
         };
-        console.log(`RSI for ${pair}: ${rsi} | ở khung ${interval}!`);
+        console.log(`RSI for ${pair}: ${rsi} ở khung ${interval}!`);
         if (rsi >= 70) {
           if (!rsiOver70[pair] || !rsiOver70[pair][interval]) {
             if (!rsiOver70[pair]) rsiOver70[pair] = {};
@@ -205,7 +205,7 @@ function fetchKLineDataForMultiplePairsAndIntervals(
       }
 
       // Đặt thời gian chờ giữa các yêu cầu (khoảng thời gian chờ giữa các cặp và khung thời gian)
-      const delayBetweenRequests = 10; // Khoảng thời gian chờ giữa các yêu cầu là 2 giây (2000ms)
+      const delayBetweenRequests = 5; // Khoảng thời gian chờ giữa các yêu cầu là 2 giây (2000ms)
       setTimeout(() => {
         fetchKLineDataForMultiplePairsAndIntervals(pairIndex, intervalIndex);
       }, delayBetweenRequests);
