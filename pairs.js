@@ -10,7 +10,7 @@ function fetchPairs() {
         const contracts = data.data;
         if (contracts.length > 0) {
           contracts.forEach((contract) => {
-            if (contract.amount24 > 10000000)
+            if (contract.amount24 > 5000000)
               pairs.push(contract.symbol)
           });
           return pairs
