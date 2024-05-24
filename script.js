@@ -11,7 +11,7 @@ app.listen(PORT, () => {
 });
 
 const discordWebhookURL =
-  "https://discord.com/api/webhooks/1131181858298802206/0U-KE9V6KNjyOPZh78hlA3cqr0_2jeLJ38qGJ94VuTPi_lP7OwWSckVIWB0nPVXQkTjy";
+  "https://discord.com/api/webhooks/1243403344668528700/jKqx2vwBrny1FJU-v7tOsi1U8PFxAy6-39RaqgjoJ49fvyIQQq5kGZP8yTzBZcEZ7mMX";
 let pairs = [];
 fetchPairs().then((updatedPairs) => {
   pairs = updatedPairs;
